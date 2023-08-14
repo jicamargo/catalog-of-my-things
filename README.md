@@ -92,7 +92,16 @@ To run the project:
 
 👤 **JIC Software (Jorge Camargo)**
 - GitHub: [@jicamargo](https://github.com/jicamargo)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jorgecamargog/?locale=en_US)
+- LinkedIn: [Jorge Camargo](https://www.linkedin.com/in/jorgecamargog/?locale=en_US)
+
+👤 **Adeyemi Olusola**
+- GitHub: [@emarkees](https://github.com/emarkees)
+- LinkedIn: [Adeyemi Olusola]https://www.linkedin.com/in/adeyemi-olusola
+
+👤 **Moyasi Ginko**
+- GitHub: [@MoyasiGinko](https://github.com/MoyasiGinko)
+- LinkedIn: [moyasi](https://www.linkedin.com/in/moyasi/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
