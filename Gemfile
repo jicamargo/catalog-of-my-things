@@ -1,5 +1,5 @@
+# Gemfile
 source 'https://rubygems.org'
 
-gem 'colorize'
-gem 'rspec'
-gem 'rubocop', '>= 1.0', '< 2.0'
+# Specify gems and their versions
+gem 'rspec', '~> 3.10'
