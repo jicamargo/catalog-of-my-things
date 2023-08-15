@@ -1,14 +1,9 @@
 # class_genre.rb
-# The Genre class inherits from the Item class using the super keyword
-# in the constructor to initialize the properties defined in the Item class.
-# Genre Class has additional properties: id:int, name:string, items:array, which are specific to genres.
 class Genre < Item
-  attr_reader :id, :name, :items
-
-  @@id_counter = 0 # Class-level counter for generating unique IDs
+  attr_reader :name, :items
 
   def initialize(name)
-    @id = generate_id
+    super(nil, nil, nil, nil) # Call superclass constructor with nil values
     @name = name
     @items = []
   end
@@ -17,11 +12,5 @@ class Genre < Item
   def add_item(item)
     @items << item
     item.genre = self # associate the item with the genre
-  end
-
-  private
-
-  def generate_id
-    @@id_counter += 1
   end
 end
