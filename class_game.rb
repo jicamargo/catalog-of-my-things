@@ -1,4 +1,5 @@
 require_relative 'Item'
+require 'json'
 
 # The Game class inherits from the Item class using the super keyword 
 # in the constructor to initialize the properties defined in the Item class.
@@ -20,5 +21,4 @@ class Game < Item
   def can_be_archived?
     super && @last_played_at < 2.years.ago
   end
-  
 end
