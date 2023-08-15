@@ -1,4 +1,4 @@
-require_relative './add_items'
+require_relative 'add_items'
 require_relative 'label'
 
 class Book < Item
@@ -25,6 +25,7 @@ class Book < Item
     end
   end
 
+  # rtfuihk
   def self.add_books(books, genre, authors, labels)
     print 'Enter name of the book: '
     label_title = gets.chomp.capitalize
@@ -48,7 +49,9 @@ class Book < Item
 
     new_book = Book.new(publisher_name, cover_state, book_date)
 
-    new_author = authors.find { |find_author| find_author.first_name == author_first_name && find_author.last_name == author_last_name }
+    new_author = authors.find do |find_author|
+      find_author.first_name == author_first_name && find_author.last_name == author_last_name
+    end
     new_genre = genre.find { |find_genre| find_genre.name == genre_name }
     new_label = labels.find { |find_label| find_label.title == label_title && find_label.color == label_color }
 
