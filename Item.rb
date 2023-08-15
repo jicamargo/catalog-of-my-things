@@ -3,8 +3,10 @@ class Item
   attr_reader :id, :archived
   attr_accessor :genre, :author, :label, :publish_date
 
-  def initialize(id, genre, author, label, publish_date)
-    @id = id
+  @@id_counter = 0  # Class-level counter for generating unique IDs
+
+  def initialize(genre, author, label, publish_date)
+    @id = generate_id
     @genre = genre
     @author = author
     @label = label
@@ -18,5 +20,11 @@ class Item
 
   def move_to_archive
     @archived = true
+  end
+
+  private
+
+  def generate_id
+    @@id_counter += 1
   end
 end
