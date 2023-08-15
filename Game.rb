@@ -13,5 +13,12 @@ class Game < Item
     @last_played_at = last_played_at
   end
 
-  # Inherited can_be_archived? method from Item
+  # override can_be_archived? method from Item
+  # return true if parent's method returns true AND 
+  # if last_played_at is older than 2 years
+  # otherwise, it should return false
+  def can_be_archived?
+    super && @last_played_at < 2.years.ago
+  end
+  
 end

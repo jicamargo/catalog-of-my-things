@@ -17,8 +17,10 @@ class Author
     @items = []
   end
 
+  # take an instance of the Item class and add it to the items array
   def add_item(item)
     @items << item
+    item.author = self # associate the item with the author
   end
 
   private
