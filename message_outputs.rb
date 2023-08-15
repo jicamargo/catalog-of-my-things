@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'colorize'
 
 # This class represents the main application for the Catalog of my things App.

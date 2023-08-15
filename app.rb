@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative 'message_outputs'
 require './models/music_album'
 require './models/genre'
