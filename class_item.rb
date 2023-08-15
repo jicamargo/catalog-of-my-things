@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # class_item.rb
 # Generic class for all items in the library
 class Item
