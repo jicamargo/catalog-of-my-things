@@ -1,4 +1,4 @@
-require_relative 'Item'
+require_relative 'class_item'
 require 'json'
 
 # The Game class inherits from the Item class using the super keyword 

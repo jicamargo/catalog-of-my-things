@@ -1,8 +1,11 @@
 require 'json'
 require_relative 'class_game'
-require_relative 'author_handler'
+require_relative 'authors_handler'
+require_relative 'date_validator'
 
 class GameHandler
+  include DateValidator
+
   def initialize
     @games = []
     @filename = 'json_data/games.json'
@@ -78,16 +81,21 @@ class GameHandler
     puts 'What is the last played date of the game?'
     last_played_at = gets.chomp
 
+    # split author name into first and last name
     author = author.split(' ')
-    author_first_name = author[0]
-    author_last_name = author[1]
-
+    author_first_name = author[0] 
+    author_last_name = author[1] || ''
+    
     # look if authors exits, otherwise create a new one
     author_handler = AuthorHandler.new
     author = author_handler.find_create_author(author_first_name, author_last_name)
 
-    # create new game
-    game = Game.new(genre, author, label, Date.parse(publish_date), multiplayer == 'Y', Date.parse(last_played_at))
+    # validate publish_date and last_pleyed_date, if not valid, set to today
+    publish_date = Date.today.to_s unless valid_date?(publish_date)
+    last_played_at = Date.today.to_s unless valid_date?(last_played_at)
+
+       # create new game
+    game = Game.new(genre, author, label, publish_date, multiplayer == 'Y', last_played_at)
     game    
   end  
 end

@@ -1,4 +1,4 @@
-require_relative 'Item'
+require_relative 'class_item'
 
 # Author class 
 # The initialize method takes parameters for the first_name and last_name
