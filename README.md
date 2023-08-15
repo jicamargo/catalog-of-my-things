@@ -96,7 +96,7 @@ To run the project:
 
 👤 **Adeyemi Olusola**
 - GitHub: [@emarkees](https://github.com/emarkees)
-- LinkedIn: [Adeyemi Olusola]https://www.linkedin.com/in/adeyemi-olusola
+- LinkedIn: [Adeyemi Olusola](https://www.linkedin.com/in/adeyemi-olusola)
 
 👤 **Moyasi Ginko**
 - GitHub: [@MoyasiGinko](https://github.com/MoyasiGinko)
