@@ -100,7 +100,7 @@ To run the project:
 
 👤 **Moyasi Ginko**
 - GitHub: [@MoyasiGinko](https://github.com/MoyasiGinko)
-- LinkedIn: [moyasi](https://www.linkedin.com/in/moyasi/)
+- LinkedIn: [Mahmudur Rahman](https://www.linkedin.com/in/moyasi/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
