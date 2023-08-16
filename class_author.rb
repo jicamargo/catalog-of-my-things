@@ -26,6 +26,6 @@ class Author
   private
 
   def generate_id
-    SecureRandom.uuid    
+    SecureRandom.uuid
   end
 end
