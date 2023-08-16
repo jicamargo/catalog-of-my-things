@@ -22,7 +22,7 @@ RSpec.describe GameHandler do
   describe '#input_author' do
     it 'reads author name from user input' do
       allow(game_handler).to receive(:gets).and_return("John Doe\n")
-      expect(game_handler.input_author).to eq(['John', 'Doe'])
+      expect(game_handler.input_author).to eq(%w[John Doe])
     end
   end
 
@@ -68,9 +68,9 @@ RSpec.describe GameHandler do
   describe '#list_games' do
     it 'lists all games' do
       allow(game_handler).to receive(:load_games).and_return([
-        Game.new('Action', Author.new('John', 'Doe'), 'Game', Date.today)
-      ])
+                                                               Game.new('Action', Author.new('John', 'Doe'), 'Game', Date.today)
+                                                             ])
       expect { game_handler.list_games }.to output(/John Doe/).to_stdout
     end
-  end  
+  end
 end

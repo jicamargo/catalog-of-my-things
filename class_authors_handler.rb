@@ -11,7 +11,7 @@ class AuthorHandler
 
   def load_authors()
     data = read_json_file(@filename)
-    data.map { |data| Author.new(data[:first_name], data[:last_name]) }
+    data.map { |author_data| Author.new(author_data[:first_name], author_data[:last_name]) }
   end
 
   def save_authors(authors)
