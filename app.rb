@@ -1,6 +1,6 @@
 require_relative 'message_outputs'
-require './models/music_album'
-require './models/genre'
+require './class_musicalbum'
+require './class_genre'
 
 # This class represents the main application for the Catalog of my things App.
 class App
