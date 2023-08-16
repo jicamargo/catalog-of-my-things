@@ -1,0 +1,28 @@
+[
+  {
+    "id": "e5008c5b-c38f-45e5-8bb8-bd64edfca09f",
+    "genre": "Action",
+    "author": {
+      "first_name": "Jorge",
+      "last_name": "Camargo"
+    },
+    "label": "Commando",
+    "publish_date": "2023-08-15",
+    "multiplayer": false,
+    "last_played_at": "2023-08-15",
+    "archived": false
+  },
+ {
+    "id": "4c5a8703-8649-44b4-bb28-94d79396b701",
+    "genre": "sports",
+    "author": {
+      "first_name": "Ea",
+      "last_name": "Sports"
+    },
+    "label": "boxing",
+    "publish_date": "2023-08-15",
+    "multiplayer": false,
+    "last_played_at": "2023-08-15",
+    "archived": false
+  }
+]

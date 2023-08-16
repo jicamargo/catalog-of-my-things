@@ -1,4 +1,5 @@
 require_relative 'class_item'
+require 'securerandom'
 
 # Author class 
 # The initialize method takes parameters for the first_name and last_name
@@ -6,9 +7,8 @@ require_relative 'class_item'
 # The add_item method allows you to associate an item with the author 
 # by adding it to the items array.
 class Author
-  attr_reader :id, :first_name, :last_name, :items
-
-  @@id_counter = 0  # Class-level counter for generating unique IDs
+  attr_reader :first_name, :last_name, :items
+  attr_accessor :id
 
   def initialize(first_name, last_name)
     @id = generate_id
@@ -26,6 +26,6 @@ class Author
   private
 
   def generate_id
-    @@id_counter += 1
+    SecureRandom.uuid    
   end
 end
