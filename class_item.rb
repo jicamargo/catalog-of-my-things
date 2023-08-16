@@ -1,8 +1,6 @@
 require 'securerandom'
 
 # class_item.rb
-# Generic class for all items in the library
-
 class Item
   attr_reader :id, :archived
   attr_accessor :genre, :author, :label, :publish_date
