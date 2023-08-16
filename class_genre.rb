@@ -1,4 +1,5 @@
 # class_genre.rb
+require_relative 'class_item'
 class Genre < Item
   attr_reader :name, :items
 
