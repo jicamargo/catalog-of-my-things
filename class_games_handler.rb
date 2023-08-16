@@ -2,9 +2,11 @@ require 'json'
 require_relative 'class_game'
 require_relative 'class_authors_handler'
 require_relative 'date_validator'
+require_relative 'file_validator'
 
 class GameHandler
   include DateValidator
+  include FileValidator
 
   def initialize
     @games = []
@@ -12,13 +14,7 @@ class GameHandler
   end
 
   def load_games()
-    return [] unless File.exist?(@filename)
-
-    json_data = File.read(@filename)
-    data = JSON.parse(json_data, symbolize_names: true)
-
-    # Return empty array if the json file is empty or is null
-    return [] if data.nil? || data.empty?
+    data = read_json_file(@filename)
 
     data.map do |game_data|
       author_data = game_data[:author]
@@ -74,7 +70,7 @@ class GameHandler
       game.multiplayer = %w[Y y].include?(multiplayer)
       game.last_played_at = last_played_at
 
-      save_game(game)
+      save_new_game(game)
     else
       puts 'Genre, author, and label are mandatory fields!'
       puts 'Game not added!'
@@ -125,7 +121,7 @@ class GameHandler
     Game.new(genre, author, label, publish_date)
   end
 
-  def save_game(game)
+  def save_new_game(game)
     games = load_games
     games << game
     save_games(games)
