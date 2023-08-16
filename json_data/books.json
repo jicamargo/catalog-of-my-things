@@ -1,0 +1,24 @@
+[
+  {
+    "publish_date": 1993,
+    "id": 71,
+    "title": "Romeo and Julieta",
+    "label_color": "red",
+    "publisher": "My house",
+    "cover_state": "bad",
+    "first_name": "Luis",
+    "last_name": "Valera",
+    "genre": "Adventure"
+  },
+  {
+    "publish_date": 0,
+    "id": 610,
+    "title": "I dont know",
+    "label_color": "Red",
+    "publisher": "On my house",
+    "cover_state": "Good",
+    "first_name": "Luis",
+    "last_name": "Carlos",
+    "genre": "Computer science"
+  }
+]
