@@ -15,10 +15,11 @@ class AuthorHandler
 
     # return empty array if the json file is empty or is null
     return [] if author_data.nil? || author_data.empty?
-
-    author_data.map do |data|
+    
+    authors = author_data.map do |data|
       Author.new(data[:first_name], data[:last_name])
     end
+    authors
   end
 
   def save_authors(authors)
@@ -32,16 +33,18 @@ class AuthorHandler
       }
     end
 
-    File.write(@filename, JSON.pretty_generate(author_data))
+    File.open(@filename, 'w') do |file|
+      file.write(JSON.pretty_generate(author_data))
+    end
   end
 
   def list_authors()
-    authors = load_authors
-    puts '------------------ LIST OF AUTHORS ------------------'
+    authors = load_authors()
+    puts "------------------ LIST OF AUTHORS ------------------"
     authors.each do |author|
       puts "First Name: #{author.first_name} Last Name: #{author.last_name}"
     end
-    puts '------------------------------------------------------'
+    puts "------------------------------------------------------"
   end
 
   # find if the author exits, otherwise create a new one
