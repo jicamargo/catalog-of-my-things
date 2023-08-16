@@ -1,4 +1,4 @@
-require './class_item'
+require_relative 'class_item'
 
 # class_musicalbum.rb
 class Musicalbum < Item
