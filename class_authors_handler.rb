@@ -34,7 +34,7 @@ class AuthorHandler
     authors.each do |author|
       puts "First Name: #{author.first_name} Last Name: #{author.last_name}"
     end
-    puts '------------------------------------------------------'
+    puts '-----------------------------------------------------'
   end
 
   # find if the author exits, otherwise create a new one
