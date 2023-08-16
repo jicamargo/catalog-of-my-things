@@ -1,24 +1,17 @@
 require 'json'
 require_relative 'class_author'
+require_relative 'file_validator'
 
 class AuthorHandler
+  include FileValidator
+
   def initialize
-    @authors = []
     @filename = 'json_data/authors.json'
   end
 
   def load_authors()
-    return [] unless File.exist?(@filename)
-
-    json_data = File.read(@filename)
-    author_data = JSON.parse(json_data, symbolize_names: true)
-
-    # return empty array if the json file is empty or is null
-    return [] if author_data.nil? || author_data.empty?
-
-    author_data.map do |data|
-      Author.new(data[:first_name], data[:last_name])
-    end
+    data = read_json_file(@filename)
+    data.map { |author_data| Author.new(author_data[:first_name], author_data[:last_name]) }
   end
 
   def save_authors(authors)
