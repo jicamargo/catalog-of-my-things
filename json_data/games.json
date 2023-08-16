@@ -1,0 +1,15 @@
+[
+  {
+    "id": "61dcb69b-f105-40b6-bf3d-ca285413f65e",
+    "genre": "action",
+    "author": {
+      "first_name": "Microsoft",
+      "last_name": "Copr"
+    },
+    "label": "astra",
+    "publish_date": "2010-05-05",
+    "multiplayer": true,
+    "last_played_at": "2023-08-16",
+    "archived": false
+  }
+]
