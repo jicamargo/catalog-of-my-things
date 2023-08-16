@@ -1,4 +1,6 @@
-require './Game'
+# test for class Game
+
+require './class_game'
 require 'rspec'
 
 describe Game do

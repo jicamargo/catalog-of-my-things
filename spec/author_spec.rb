@@ -1,4 +1,6 @@
-require './Author'
+# test for the class Author
+
+require './class_author'
 require 'rspec'
 
 describe Author do

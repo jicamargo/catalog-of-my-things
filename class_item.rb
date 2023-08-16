@@ -1,10 +1,11 @@
+require 'securerandom'
+
 # class_item.rb
 # Generic class for all items in the library
+
 class Item
   attr_reader :id, :archived
   attr_accessor :genre, :author, :label, :publish_date
-
-  @id_counter = 0 # Class-level counter for generating unique IDs
 
   def initialize(genre, author, label, publish_date)
     @id = generate_id
@@ -28,6 +29,6 @@ class Item
   private
 
   def generate_id
-    @id_counter += 1
+    SecureRandom.uuid
   end
 end
