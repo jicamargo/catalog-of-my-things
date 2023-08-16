@@ -1,16 +1,16 @@
 require_relative 'message_outputs'
-require './models/music_album'
-require './models/genre'
+require_relative 'message_outputs'
+require_relative 'class_genre_handler'
+require_relative 'class_musicalbum_handler'
 
-# This class represents the main application for the Catalog of my things App.
 class App
   include MessageOutputs
-  attr_accessor :music_albums, :genre, :authors
+  attr_accessor :musicalbum_handler, :genre_handler, :music_albums
 
   def initialize
-    @music_albums = []
-    @genre = []
-    @authors = []
+    @musicalbum_handler = MusicalbumHandler.new
+    @genre_handler = GenreHandler.new
+    @music_albums = [] # Initialize the instance variable here
   end
 
   def run
@@ -24,11 +24,11 @@ class App
   def option_selected(number)
     case number
     when 2
-      MusicAlbum.list_all_music_albums(music_albums)
+      musicalbum_handler.list_musicalbums
     when 4
-      Genre.list_all_genres(genre)
+      genre_handler.list_genres
     when 8
-      MusicAlbum.add_music_album(music_albums, genre, authors)
+      musicalbum_handler.add_music_album(genre_handler.genres)
     when 10
       goodbye
       exit
