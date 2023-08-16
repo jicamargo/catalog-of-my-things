@@ -7,5 +7,4 @@ author_handler = AuthorHandler.new
 game_handler = GameHandler.new
 game_handler.input_new_game
 game_handler.list_games
-
 author_handler.list_authors

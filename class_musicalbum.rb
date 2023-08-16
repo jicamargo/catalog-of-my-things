@@ -1,3 +1,5 @@
+require_relative 'class_item'
+
 # class_musicalbum.rb
 class Musicalbum < Item
   attr_accessor :on_spotify
