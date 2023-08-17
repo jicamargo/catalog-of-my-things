@@ -31,10 +31,12 @@ class MusicalbumHandler
     puts 'Is the album on Spotify? (Y/N):'
     on_spotify = gets.chomp.downcase == 'y'
 
+    puts "Musicalbum: '#{selected_genre}' added."
     new_album = Musicalbum.new(selected_genre, nil, title, Time.now, on_spotify)
     @musicalbums << new_album
 
     puts "Album '#{title}' added."
+    puts "Album '#{musicalbums}' added."
   end
 
   def genre_validator(genres)
@@ -42,13 +44,13 @@ class MusicalbumHandler
     name = gets.chomp
     genre = Genre.new(name)
     genres << genre # Add the new genre to the genres array
-    genre # Update selected_genre with the newly added genre
+    genre.name # Update selected_genre with the newly added genre
   end
 
   def list_musicalbums
     puts 'List of Music Albums:'
     @musicalbums.each do |album|
-      puts "Title: #{album.label}, Genre: #{album.genre.name}"
+      puts "Title: #{album.label}, Genre: #{album.genre.nil? ? 'Unknown' : album.genre}"
     end
   end
 end
