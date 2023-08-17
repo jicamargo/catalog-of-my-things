@@ -1,7 +1,7 @@
 require_relative 'message_outputs'
 require_relative 'class_genre_handler'
 require_relative 'class_musicalbum_handler'
-
+require_relative 'class_storage'
 require_relative 'class_games_handler'
 require_relative 'class_author'
 
@@ -18,11 +18,26 @@ class App
     @game_handler = GameHandler.new
   end
 
+  def clear_console
+    if RUBY_PLATFORM =~ /win32|win64|x64|\.NET|windows|cygwin|mingw32/i
+      system('cls')
+    else
+      system('clear')
+    end
+  end
+  
+  def press_enter_to_continue
+    puts "\nPress Enter to continue..."
+    gets
+  end
+
   def run
-    greetings
     loop do
+      clear_console
+      greetings
       number_choice = options
       option_selected(number_choice)
+      press_enter_to_continue
     end
   ensure
     save_genres_json

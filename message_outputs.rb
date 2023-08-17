@@ -3,7 +3,9 @@ require 'colorize'
 # This class represents the main application for the Catalog of my things App.
 module MessageOutputs
   def greetings
-    puts 'Welcome to our Catalog of my things App'
+    puts '________________________________________________'.colorize(color: :green)
+    puts '    Welcome to our Catalog of my things App'.colorize(color: :green).bold
+    puts '________________________________________________'.colorize(color: :green)
   end
 
   def options
@@ -19,9 +21,9 @@ module MessageOutputs
                '     9) - Add a game',
                '    10) - Exit'.colorize(color: :red).bold,
                '']
-    puts '________________________________________________'
-    puts "\nPlease choose an option by entering a number:".underline
+    puts "\nPlease choose an option by entering a number:".underline.colorize(color: :green)
     puts options
+    print 'Option: '.colorize(color: :green)
     gets.chomp.to_i
   end
 
