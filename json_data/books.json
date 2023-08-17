@@ -1,24 +1,15 @@
 [
   {
-    "publish_date": 1993,
-    "id": 71,
-    "title": "Romeo and Julieta",
-    "label_color": "red",
-    "publisher": "My house",
-    "cover_state": "bad",
-    "first_name": "Luis",
-    "last_name": "Valera",
-    "genre": "Adventure"
-  },
-  {
-    "publish_date": 0,
-    "id": 610,
-    "title": "I dont know",
-    "label_color": "Red",
-    "publisher": "On my house",
-    "cover_state": "Good",
-    "first_name": "Luis",
-    "last_name": "Carlos",
-    "genre": "Computer science"
+    "id": "14bfecaa-f613-4b40-a4b2-b602a207248f",
+    "genre": "terror",
+    "label": {
+      "title": "Book title",
+      "color": "Green"
+    },
+    "author": "jorge",
+    "publish_date": "2023-08-17",
+    "cover_state": "EXCELLENT",
+    "publisher": "PUBLISHER DDS",
+    "archived": false
   }
 ]

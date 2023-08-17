@@ -32,12 +32,11 @@ class MusicalbumHandler
     puts 'Is the album on Spotify? (Y/N):'
     on_spotify = gets.chomp.downcase == 'y'
 
-    puts "Musicalbum: '#{selected_genre}' added."
+    puts "Genre: '#{selected_genre}' selected."
     new_album = Musicalbum.new(selected_genre, nil, title, Time.now, on_spotify)
     @musicalbums << new_album
 
     puts "Album '#{title}' added."
-    puts "Album '#{musicalbums}' added."
   end
 
   def genre_validator(genres)

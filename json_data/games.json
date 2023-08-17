@@ -1,0 +1,15 @@
+[
+  {
+    "id": "d46458ed-054f-4694-a67c-876ef3fdd35b",
+    "genre": "SPORT",
+    "author": {
+      "first_name": "The",
+      "last_name": "Game"
+    },
+    "label": "LABEL",
+    "publish_date": "2023-08-17",
+    "multiplayer": true,
+    "last_played_at": "2023-08-17",
+    "archived": false
+  }
+]
