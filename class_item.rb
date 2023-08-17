@@ -1,40 +1,32 @@
 require 'securerandom'
-require_relative 'class_label'
 
+# class_item.rb
 class Item
-  attr_reader :genre, :author, :label, :publish_date, :id
-  attr_accessor :archived
+  attr_reader :id, :archived
+  attr_accessor :genre, :author, :label, :publish_date
 
-  def initialize(publish_date, id = SecureRandom.random_number(1000))
+  def initialize(genre, author, label, publish_date)
+    @id = generate_id
+    @genre = genre
+    @author = author
+    @label = label
     @publish_date = publish_date
     @archived = false
-    @id = id
   end
 
-  def add_genre(genre)
-    @genre = genre
+  # return true if published_date is older than 10 years.
+  def can_be_archived?
+    Time.now.year - @publish_date.year > 10
   end
 
-  def add_author(author)
-    @author = author
-  end
-
-  def add_label(label)
-    @label = label
-  end
-
-  def add_source(source)
-    @source = source
-  end
-
+  # reuse can_be_archived?() method.
   def move_to_archive
     @archived = true if can_be_archived?
   end
 
   private
 
-  def can_be_archived?
-    date = publish_date.to_i
-    Time.new.year - date >= 10
+  def generate_id
+    SecureRandom.uuid
   end
 end

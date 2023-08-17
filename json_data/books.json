@@ -1,24 +1,15 @@
 [
   {
-    "publish_date": 1993,
-    "id": 71,
-    "title": "Romeo and Julieta",
-    "label_color": "red",
-    "publisher": "My house",
-    "cover_state": "bad",
-    "first_name": "Luis",
-    "last_name": "Valera",
-    "genre": "Adventure"
-  },
-  {
-    "publish_date": 0,
-    "id": 610,
-    "title": "I dont know",
-    "label_color": "Red",
-    "publisher": "On my house",
-    "cover_state": "Good",
-    "first_name": "Luis",
-    "last_name": "Carlos",
-    "genre": "Computer science"
+    "id": "1a13654f-fa00-4dbb-b7c8-ae76339c264a",
+    "genre": "Love",
+    "label": {
+      "title": "Touch of hint",
+      "color": "Green"
+    },
+    "author": "Make Bary",
+    "publish_date": "2020-02-02",
+    "cover_state": "Pure",
+    "publisher": "Yanks Gary",
+    "archived": false
   }
 ]
