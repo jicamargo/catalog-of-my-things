@@ -4,10 +4,13 @@ require_relative 'class_musicalbum_handler'
 require_relative 'class_storage'
 require_relative 'class_games_handler'
 require_relative 'class_author'
+require_relative 'class_books_handler'
+require_relative 'class_labels_handler'
 
 class App
   include MessageOutputs
-  attr_accessor :musicalbum_handler, :genre_handler, :music_albums, :author_handler, :game_handler
+  attr_accessor :musicalbum_handler, :genre_handler, :music_albums, :author_handler, :game_handler,
+  :book_handler, :label_handler
 
   def initialize
     @musicalbum_handler = MusicalbumHandler.new
@@ -16,6 +19,8 @@ class App
     @music_albums = [] # Initialize the instance variable here
     @author_handler = AuthorHandler.new
     @game_handler = GameHandler.new
+    @book_handler = BookHandler.new
+    @label_handler = LabelHandler.new
   end
 
   def clear_console
@@ -46,14 +51,20 @@ class App
 
   def option_selected(number)
     case number
+    when 1
+      book_handler.list_books
     when 2
       musicalbum_handler.list_musicalbums
     when 3
       game_handler.list_games
     when 4
       genre_handler.list_genres
+    when 5
+      label_handler.list_labels
     when 6
       author_handler.list_authors
+    when 7
+      book_handler.input_new_book
     when 8
       musicalbum_handler.add_music_album(genre_handler.genres)
     when 9
