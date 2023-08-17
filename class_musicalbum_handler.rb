@@ -14,11 +14,12 @@ class MusicalbumHandler
     title = gets.chomp
 
     puts 'Select a genre:'
-    genre_name = gets.chomp.downcase
+    genre_name = gets.chomp
 
-    selected_genre = genres.find { |genre| genre.name.downcase == genre_name }
+    select_genre = genres.find { |genre| genre.name.downcase == genre_name.downcase }
+    selected_genre = genre_name
 
-    if selected_genre.nil?
+    if select_genre.nil?
       puts 'Genre not found.'
       puts 'Do you want to add a new genre? (Y/N):'
       add_genre = gets.chomp.downcase == 'y'

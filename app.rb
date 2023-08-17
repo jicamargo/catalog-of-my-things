@@ -1,7 +1,7 @@
 require_relative 'message_outputs'
 require_relative 'class_genre_handler'
 require_relative 'class_musicalbum_handler'
-
+require_relative 'class_storage'
 require_relative 'class_games_handler'
 require_relative 'class_author'
 
