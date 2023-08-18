@@ -1,15 +1,15 @@
 [
   {
-    "id": "d46458ed-054f-4694-a67c-876ef3fdd35b",
-    "genre": "SPORT",
+    "id": "61dcb69b-f105-40b6-bf3d-ca285413f65e",
+    "genre": "action",
     "author": {
-      "first_name": "The",
-      "last_name": "Game"
+      "first_name": "Microsoft",
+      "last_name": "Copr"
     },
-    "label": "LABEL",
-    "publish_date": "2023-08-17",
+    "label": "astra",
+    "publish_date": "2010-05-05",
     "multiplayer": true,
-    "last_played_at": "2023-08-17",
+    "last_played_at": "2023-08-16",
     "archived": false
   }
 ]

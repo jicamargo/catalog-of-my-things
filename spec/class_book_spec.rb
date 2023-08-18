@@ -1,5 +1,5 @@
-require './book'
-# require './add_items'
+require './class_book'
+require './class_item'
 
 describe Book do
   context 'when using the can_be_archive? method with a cover_state = "bad" ' do
