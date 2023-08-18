@@ -25,9 +25,6 @@
 
 ## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack"></a>
-### Built With <a name="built-with"></a>
-
 #### Tech Stack <a name="tech-stack"></a>
 
 - Ruby
@@ -57,12 +54,6 @@
   the repository.
 - Step 4: If you want to watch the html file open it with your favorite web browser(This project MUST be opened from VS Code for full functionality).
 - Step 5: If you want to edit this project open it with your favorite text editor.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 💻 Getting Started <a name="getting-started"></a>
-
-To get a local copy up and running cloning this repo `https://github.com/jicamargo/catalog-of-my-things.git`
 
 ### Prerequisites
 
@@ -108,6 +99,21 @@ To run the project:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+<!-- FUTURE FEATURES -->
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Search and Filtering Functionality:**
+Enhance user experience by implementing search and filtering capabilities. Allow users to search for specific items, authors, genres, labels, etc. You can also enable users to filter their collections based on criteria such as archived items, genres, labels, and more. This feature will make it easier for users to navigate and manage their collections, especially as the number of items grows.
+
+- [ ] **User Authentication and Profiles:**
+Implement user authentication and allow users to create profiles. This will enable multiple users to maintain their individual collections within the app. Users can log in, create, and manage their collections securely. User profiles can also allow for personalized settings, preferences, and privacy controls.
+
+- [ ] **Integration with Online APIs:**
+Extend the app's functionality by integrating with external APIs to fetch additional information about items. For instance, you could integrate with online databases like OpenLibrary for books, Spotify for music albums, IMDB for movies, or IGDB for games. This integration can automatically populate item details, covers, descriptions, and more, saving users time and ensuring accuracy.
+
+- [ ] **Database Integration and Synchronization:**
+Expand the app's capabilities by integrating it with a relational database management system (RDBMS) such as PostgreSQL or SQLite. Instead of relying solely on JSON files, you can save and retrieve data from the database, providing better data management and scalability.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
