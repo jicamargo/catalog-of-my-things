@@ -4,7 +4,7 @@ RSpec.describe Item do
   let(:genre) { double('Genre', items: []) }
   let(:author) { double('Author', items: []) }
   let(:label) { double('Label', items: []) }
-  let(:publish_date) { Time.now - 11 * 365 * 24 * 60 * 60 } # Older than 10 years
+  let(:publish_date) { Time.now - (11 * 365 * 24 * 60 * 60) } # Older than 10 years
 
   subject(:item) { described_class.new(genre, author, label, publish_date) }
 
@@ -16,7 +16,7 @@ RSpec.describe Item do
     end
 
     context 'when publish_date is not older than 10 years' do
-      let(:publish_date) { Time.now - 9 * 365 * 24 * 60 * 60 } # Less than 10 years
+      let(:publish_date) { Time.now - (9 * 365 * 24 * 60 * 60) } # Less than 10 years
 
       it 'returns false' do
         expect(item.can_be_archived?).to eq(false)
