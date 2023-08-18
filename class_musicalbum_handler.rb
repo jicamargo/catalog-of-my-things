@@ -48,7 +48,7 @@ class MusicalbumHandler
   end
 
   def list_musicalbums
-    puts 'List of Music Albums:'
+    puts '-----------------  LIST OF MUSIC ALBUMS -----------------'
     @musicalbums.each do |album|
       puts "Title: #{album.label}, Genre: #{album.genre.nil? ? 'Unknown' : album.genre}"
     end

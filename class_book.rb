@@ -1,7 +1,7 @@
 require_relative 'class_item'
 
 class Book < Item
-  attr_accessor :publisher, :cover_state, :archived
+  attr_accessor :publisher, :cover_state, :archived, :id
 
   def initialize(genre, author, label, publish_date)
     super(genre, author, label, publish_date) # Call superclass constructor

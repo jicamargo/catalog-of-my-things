@@ -26,6 +26,6 @@ class Author
   private
 
   def generate_id
-    SecureRandom.uuid
+    SecureRandom.random_number(1000)
   end
 end

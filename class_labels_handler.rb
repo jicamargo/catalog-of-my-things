@@ -32,13 +32,15 @@ class LabelHandler
     labels = load_labels
     puts '------------------ LIST OF LABELS ------------------'
     labels.each do |label|
-      puts "Title: #{label.title} Color: #{label.color}"
+      title = label.title.strip.capitalize
+      color = label.color.strip.capitalize
+      puts "Title: #{title.ljust(20)}    Color: #{color}"
     end
     puts '-----------------------------------------------------'
   end
 
   # find if the label exits, otherwise create a new one
-  def find_create_label(title, color)
+  def find_create_label(title = '', color = '')
     trimmed_title = title.strip.capitalize
     trimmed_color = color.strip.capitalize
 

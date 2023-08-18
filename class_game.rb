@@ -5,7 +5,7 @@ require_relative 'class_item'
 # Game Class has additional properties: multiplayer and last_played_at,
 # which are specific to games.
 class Game < Item
-  attr_accessor :multiplayer, :last_played_at, :archived
+  attr_accessor :multiplayer, :last_played_at, :archived, :id
 
   def initialize(genre, author, label, publish_date)
     super(genre, author, label, publish_date) # Call superclass constructor

@@ -1,5 +1,5 @@
 require_relative 'message_outputs'
-require_relative 'class_genre_handler'
+require_relative 'class_genres_handler'
 require_relative 'class_musicalbum_handler'
 require_relative 'class_storage'
 require_relative 'class_games_handler'
@@ -45,7 +45,7 @@ class App
       press_enter_to_continue
     end
   ensure
-    save_genres_json
+    # save_genres_json
     save_albums_json
   end
 
@@ -69,7 +69,7 @@ class App
       musicalbum_handler.add_music_album(genre_handler.genres)
     when 9
       game_handler.input_new_game
-    when 10
+    when 0
       goodbye
       exit
     else
