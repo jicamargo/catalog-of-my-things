@@ -66,7 +66,7 @@ class App
     when 7
       book_handler.input_new_book
     when 8
-      musicalbum_handler.add_music_album(genre_handler.genres)
+      musicalbum_handler.add_music_album
     when 9
       game_handler.input_new_game
     when 0

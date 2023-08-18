@@ -9,16 +9,6 @@ class Book < Item
     @cover_state = 'good'
   end
 
-  #setter for publisher
-  def publisher=(publisher)
-    @publisher = publisher
-  end
-
-  #setter for cover_state
-  def cover_state=(cover_state)
-    @cover_state = cover_state
-  end
-
   # override can_be_archived? method from Item return true if parent's method
   # returns true OR if cover_state is bad otherwise, it should return false
 
