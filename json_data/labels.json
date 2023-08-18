@@ -1,17 +1,12 @@
 [
   {
-    "id": 68,
+    "id": 340,
     "title": "Label 1",
     "color": "Red"
   },
   {
-    "id": 465,
+    "id": 96,
     "title": "Label 2",
     "color": "Blue"
-  },
-  {
-    "id": 387,
-    "title": "New book",
-    "color": "Green"
   }
 ]
