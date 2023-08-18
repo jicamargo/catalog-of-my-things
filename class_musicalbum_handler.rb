@@ -22,21 +22,11 @@ class MusicalbumHandler
     genres = @genre_handler.load_genres
 
     puts 'Select a genre:'
-<<<<<<< HEAD
     genre_name = gets.chomp.capitalize
     select_genre = genres.find { |genre| genre.name.downcase == genre_name.downcase }
     if select_genre.nil?
       puts "Genre '#{genre_name}' not found."
       print 'Do you want to add it? (Y/N):'
-=======
-    genre_name = gets.chomp.downcase
-
-    selected_genre = genres.find { |genre| genre.name.downcase == genre_name }
-
-    if selected_genre.nil?
-      puts 'Genre not found.'
-      puts 'Do you want to add a new genre? (Y/N):'
->>>>>>> 687654a5e18f8fb1e417dbf29fcda55aadea9bee
       add_genre = gets.chomp.downcase == 'y'
 
       return unless add_genre
@@ -49,7 +39,6 @@ class MusicalbumHandler
     print 'Is the album on Spotify? (Y/N):'
     on_spotify = gets.chomp.downcase == 'y'
 
-<<<<<<< HEAD
     if valid_input?(genre_name, author_first_name, title)
       genre = @genre_handler.find_create_genre(genre_name)
       label = @label_handler.find_create_label(title, 'Album')
@@ -70,14 +59,6 @@ class MusicalbumHandler
     print 'Author (FirstName LastName):'
     author = gets.chomp.split
     [author[0], author[1] || '']
-=======
-    puts "Musicalbum: '#{selected_genre}' added."
-    new_album = Musicalbum.new(selected_genre, nil, title, Time.now, on_spotify)
-    @musicalbums << new_album
-
-    puts "Album '#{title}' added."
-    puts "Album '#{musicalbums}' added."
->>>>>>> 687654a5e18f8fb1e417dbf29fcda55aadea9bee
   end
 
   def genre_validator(genres)

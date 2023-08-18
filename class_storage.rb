@@ -43,15 +43,7 @@ class Storage
         on_spotify: music_album.on_spotify
       }
     end
-<<<<<<< HEAD
     File.write('json_data/album.json', JSON.pretty_generate(musicalbum_data))
-=======
-
-    puts 'Saving album data:'
-    puts musicalbum_data.inspect
-
-    File.write('json_data/album.json', JSON.generate(musicalbum_data))
->>>>>>> 687654a5e18f8fb1e417dbf29fcda55aadea9bee
   end
 
   def load_musicalbum_json(musicalbums)
@@ -81,13 +73,6 @@ class Storage
       musicalbum.genre = genre
       musicalbum.label = label
       musicalbum.author = author
-      # musicalbum = Musicalbum.new(
-      #   ma_data['genre'],
-      #   ma_data['author'],
-      #   ma_data['label'],
-      #   ma_data['publish_date'], # Parse back to DateTime if needed
-      #   ma_data['on_spotify']
-      # )
 
       musicalbums << musicalbum
     end

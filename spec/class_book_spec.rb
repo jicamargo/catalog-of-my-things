@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 require_relative '../class_books_handler'
 require_relative '../class_genres_handler'
 require_relative '../class_labels_handler'
@@ -79,23 +78,6 @@ RSpec.describe BookHandler do
 
       result = book_handler.find_create_author('John', 'Doe')
       expect(result).to eq(author)
-=======
-require './class_book'
-require './class_item'
-
-describe Book do
-  context 'when using the can_be_archive? method with a cover_state = "bad" ' do
-    it 'returns true when cover_state = "bad" or method from item class returns true' do
-      book = Book.new('In the house', 'bad', 2012)
-      expect(book.send(:can_be_archived?)).to be true
-    end
-  end
-
-  context 'when using the can_be_archive? method with a cover_state = "good" ' do
-    it 'returns false when cover_state != "bad" and if method from item class returns false' do
-      book2 = Book.new('In the house', 'good', 2023)
-      expect(book2.send(:can_be_archived?)).to be false
->>>>>>> 687654a5e18f8fb1e417dbf29fcda55aadea9bee
     end
   end
 end

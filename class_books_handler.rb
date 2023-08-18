@@ -18,10 +18,6 @@ class BookHandler
 
   def load_books()
     data = read_json_file(@filename)
-<<<<<<< HEAD
-=======
-    books = data.map do |book_data|
->>>>>>> 687654a5e18f8fb1e417dbf29fcda55aadea9bee
 
     data.map do |book_data|
       genre = Genre.new(book_data[:genre][:name])
