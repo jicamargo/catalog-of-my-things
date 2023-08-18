@@ -24,7 +24,8 @@ class Storage
       genre = Genre.new(genre_data['genre'])
       genres << genre
     end
-    # puts 'Genres loaded successfully!'
+
+    puts 'Genres loaded successfully!'
   end
 
   def save_musicalbum_json(musicalbums)
@@ -38,8 +39,8 @@ class Storage
       }
     end
 
-    # puts 'Saving album data:'
-    # puts musicalbum_data.inspect
+    puts 'Saving album data:'
+    puts musicalbum_data.inspect
 
     File.write('json_data/album.json', JSON.generate(musicalbum_data))
   end
@@ -61,6 +62,7 @@ class Storage
       )
       musicalbums << musicalbum
     end
-    # puts 'Albums loaded successfully!'
+
+    puts 'Albums loaded successfully!'
   end
 end

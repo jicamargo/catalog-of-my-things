@@ -14,12 +14,11 @@ class MusicalbumHandler
     title = gets.chomp
 
     puts 'Select a genre:'
-    genre_name = gets.chomp
+    genre_name = gets.chomp.downcase
 
-    select_genre = genres.find { |genre| genre.name.downcase == genre_name.downcase }
-    selected_genre = genre_name
+    selected_genre = genres.find { |genre| genre.name.downcase == genre_name }
 
-    if select_genre.nil?
+    if selected_genre.nil?
       puts 'Genre not found.'
       puts 'Do you want to add a new genre? (Y/N):'
       add_genre = gets.chomp.downcase == 'y'
@@ -32,11 +31,12 @@ class MusicalbumHandler
     puts 'Is the album on Spotify? (Y/N):'
     on_spotify = gets.chomp.downcase == 'y'
 
-    puts "Genre: '#{selected_genre}' selected."
+    puts "Musicalbum: '#{selected_genre}' added."
     new_album = Musicalbum.new(selected_genre, nil, title, Time.now, on_spotify)
     @musicalbums << new_album
 
     puts "Album '#{title}' added."
+    puts "Album '#{musicalbums}' added."
   end
 
   def genre_validator(genres)
