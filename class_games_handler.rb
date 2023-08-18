@@ -146,7 +146,7 @@ class GameHandler
     games = load_games
     games << game
     save_games(games)
-    puts '\nGame added successfully!'
+    puts "\nGame added successfully!"
   end
 
   def list_games()

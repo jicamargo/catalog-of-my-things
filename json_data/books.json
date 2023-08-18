@@ -103,5 +103,26 @@
     "cover_state": "",
     "publisher": "",
     "archived": false
+  },
+  {
+    "id": 752,
+    "genre": {
+      "id": 620,
+      "name": "Action"
+    },
+    "label": {
+      "id": 387,
+      "title": "New book",
+      "color": "Green"
+    },
+    "author": {
+      "id": 261,
+      "first_name": "Jhon",
+      "last_name": "Perterson"
+    },
+    "publish_date": "2023-08-18",
+    "cover_state": "Bad",
+    "publisher": "",
+    "archived": false
   }
 ]

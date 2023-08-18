@@ -60,12 +60,12 @@ RSpec.describe GameHandler do
     end
   end
 
-  describe '#save_game' do
-    it 'saves a game' do
+  describe '#save_new_game' do
+    it 'saves a new game' do
       allow(game_handler).to receive(:load_games).and_return([])
       game = Game.new('Action', Author.new('John', 'Doe'), 'Game', Date.today)
       expect(game_handler).to receive(:save_games).with([game])
-      game_handler.save_game(game)
+      game_handler.save_new_game(game)
     end
   end
 

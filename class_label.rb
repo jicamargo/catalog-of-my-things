@@ -1,29 +1,23 @@
+require_relative 'class_item'
 require 'securerandom'
 
 class Label
   attr_accessor :id, :title, :color, :items
 
-  def initialize(title, color, id = SecureRandom.random_number(1000))
+  def initialize(title, color)
+    @id = generate_id
     @title = title
     @color = color
-    @id = id
     @items = []
   end
 
-  def self.list_all_labels(labels)
-    if labels.empty?
-      puts 'No Labels found'
-    else
-      puts 'List of all labels: '
-      labels.each_with_index do |label, index|
-        puts "#{index}) (ID: #{label.id}) Label: #{label.title}, Color: #{label.color}"
-      end
-      puts
-    end
-  end
-
+  # take an instance of the Item class and add it to the items array
   def add_item(item)
     @items << item
-    item.add_label(self)
+    item.label = self # associate the item with the label
+  end
+
+  def generate_id
+    SecureRandom.random_number(1000)
   end
 end

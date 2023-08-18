@@ -10,7 +10,6 @@
 /test/version_tmp/
 /tmp/
 /test_file
-/json_data
 
 # Used by dotenv library to load environment variables.
 # .env

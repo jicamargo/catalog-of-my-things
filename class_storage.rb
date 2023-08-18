@@ -26,8 +26,7 @@ class Storage
       genre = Genre.new(genre_data['genre'])
       genres << genre
     end
-
-    puts 'Genres loaded successfully!'
+    # puts 'Genres loaded successfully!'
   end
 
   def save_musicalbum_json(musicalbums)
@@ -73,10 +72,16 @@ class Storage
       musicalbum.genre = genre
       musicalbum.label = label
       musicalbum.author = author
+      # musicalbum = Musicalbum.new(
+      #   ma_data['genre'],
+      #   ma_data['author'],
+      #   ma_data['label'],
+      #   ma_data['publish_date'], # Parse back to DateTime if needed
+      #   ma_data['on_spotify']
+      # )
 
       musicalbums << musicalbum
     end
-
-    puts 'Albums loaded successfully!'
+    # puts 'Albums loaded successfully!'
   end
 end
