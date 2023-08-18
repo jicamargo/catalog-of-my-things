@@ -38,8 +38,9 @@
 - **Efficient Search**: Search and retrieve items based on various criteria, enhancing the usability of your catalog.
 
 #### Demostration video <a name="live-demo"></a>
-  - [🚀 Watch the team talking about this project](https://drive.google.com/file/d/1J8v6inrGrJsUpXXhJ0QO91eOwAnqpa0l/view?usp=sharing)
-
+  - [🚀 Watch the team talking about this project](https://drive.google.com/file/d/1QbWXiT3oYmOVbeZgqD8WhShAGYxd4eup/view?usp=sharing)
+  - do you Want to know what the authors are most proud of? 🚀 Watch the video, specially at 3:21 minute 👀.
+  
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
