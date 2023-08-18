@@ -1,0 +1,152 @@
+<<<<<<< HEAD
+=======
+[
+  {
+    "id": 519,
+    "genre": {
+      "id": 492,
+      "name": "Action"
+    },
+    "label": {
+      "id": 962,
+      "title": "Street f",
+      "color": "Game"
+    },
+    "author": {
+      "id": 94,
+      "first_name": "Juan",
+      "last_name": "Camargo"
+    },
+    "publish_date": "1995-10-10",
+    "multiplayer": false,
+    "last_played_at": "2023-08-17",
+    "archived": false
+  },
+  {
+    "id": 627,
+    "genre": {
+      "id": 984,
+      "name": "Dramma"
+    },
+    "label": {
+      "id": 839,
+      "title": "The otto game",
+      "color": "Game"
+    },
+    "author": {
+      "id": 665,
+      "first_name": "Otto",
+      "last_name": "Cadada"
+    },
+    "publish_date": "2023-08-17",
+    "multiplayer": true,
+    "last_played_at": "2023-08-16",
+    "archived": false
+  },
+  {
+    "id": 878,
+    "genre": {
+      "id": 106,
+      "name": "Factastic"
+    },
+    "label": {
+      "id": 507,
+      "title": "Fantasy",
+      "color": "Game"
+    },
+    "author": {
+      "id": 27,
+      "first_name": "Fsdfasdfsd",
+      "last_name": "Fsadfdsafsd"
+    },
+    "publish_date": "2023-08-17",
+    "multiplayer": true,
+    "last_played_at": "2023-08-17",
+    "archived": false
+  },
+  {
+    "id": 725,
+    "genre": {
+      "id": 700,
+      "name": "Factastic"
+    },
+    "label": {
+      "id": 371,
+      "title": "Eeeeeee",
+      "color": "Game"
+    },
+    "author": {
+      "id": 134,
+      "first_name": "Ererer",
+      "last_name": ""
+    },
+    "publish_date": "2023-08-17",
+    "multiplayer": false,
+    "last_played_at": "2023-08-17",
+    "archived": false
+  },
+  {
+    "id": 935,
+    "genre": {
+      "id": 880,
+      "name": "Factastic"
+    },
+    "label": {
+      "id": 44,
+      "title": "Adasd",
+      "color": "Game"
+    },
+    "author": {
+      "id": 421,
+      "first_name": "Dsadasd",
+      "last_name": "Dasdas"
+    },
+    "publish_date": "2023-08-17",
+    "multiplayer": false,
+    "last_played_at": "2023-08-17",
+    "archived": false
+  },
+  {
+    "id": 780,
+    "genre": {
+      "id": 293,
+      "name": "Action"
+    },
+    "label": {
+      "id": 895,
+      "title": "Dsadsad",
+      "color": "Game"
+    },
+    "author": {
+      "id": 903,
+      "first_name": "Dsaad",
+      "last_name": "Dasdad"
+    },
+    "publish_date": "2023-08-17",
+    "multiplayer": false,
+    "last_played_at": "2023-08-17",
+    "archived": false
+  },
+  {
+    "id": 403,
+    "genre": {
+      "id": 185,
+      "name": "Dramma"
+    },
+    "label": {
+      "id": 243,
+      "title": "F fasdfasdfds",
+      "color": "Game"
+    },
+    "author": {
+      "id": 145,
+      "first_name": "Fdsfdsf",
+      "last_name": "Fsdafsdf"
+    },
+    "publish_date": "2023-08-17",
+    "multiplayer": false,
+    "last_played_at": "2023-08-17",
+    "archived": false
+  }
+]
+>>>>>>> 687654a5e18f8fb1e417dbf29fcda55aadea9bee

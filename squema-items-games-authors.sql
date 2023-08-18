@@ -55,20 +55,3 @@ CREATE TABLE label(
     color VARCHAR(55) NOT NULL,
     PRIMARY KEY(id)
 );
-
--- Genre
-CREATE TABLE genre(
-    id INT GENERATED ALWAYS AS IDENTITY,
-    title VARCHAR(255) NOT NULL,
-    PRIMARY KEY(id)
-);
-
--- MusicAlbum
-CREATE TABLE music_album(
-    id INT GENERATED ALWAYS AS IDENTITY,
-    publish_date DATE NOT NULL,
-    archived BOOLEAN,
-    label_id INT NOT NULL,
-    PRIMARY KEY(id),
-    FOREIGN KEY (label_id) REFERENCES label(id)
-);
