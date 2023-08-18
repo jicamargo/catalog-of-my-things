@@ -9,12 +9,6 @@ class Book < Item
     @cover_state = 'good'
   end
 
-  # setter for publisher
-  attr_writer :publisher
-
-  # setter for cover_state
-  attr_writer :cover_state
-
   # override can_be_archived? method from Item return true if parent's method
   # returns true OR if cover_state is bad otherwise, it should return false
 
