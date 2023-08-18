@@ -10,7 +10,7 @@ require_relative 'class_labels_handler'
 class App
   include MessageOutputs
   attr_accessor :musicalbum_handler, :genre_handler, :music_albums, :author_handler, :game_handler,
-  :book_handler, :label_handler
+                :book_handler, :label_handler
 
   def initialize
     @musicalbum_handler = MusicalbumHandler.new
@@ -30,7 +30,7 @@ class App
       system('clear')
     end
   end
-  
+
   def press_enter_to_continue
     puts "\nPress Enter to continue..."
     gets
@@ -66,7 +66,7 @@ class App
     when 7
       book_handler.input_new_book
     when 8
-      musicalbum_handler.add_music_album(genre_handler.genres)
+      musicalbum_handler.add_music_album
     when 9
       game_handler.input_new_game
     when 0

@@ -1,6 +1,9 @@
 # class_genre.rb
+
 require_relative 'class_item'
-class Genre < Item
+require 'securerandom'
+
+class Genre
   attr_reader :name, :items
   attr_accessor :id
 

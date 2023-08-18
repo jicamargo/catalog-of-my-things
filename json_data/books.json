@@ -7,13 +7,13 @@
     },
     "label": {
       "id": 728,
-      "title": "Dasfadsf",
-      "color": "Asdfadsf"
+      "title": "Liive good",
+      "color": "blue"
     },
     "author": {
       "id": 498,
-      "first_name": "Fdsfsdafsdf",
-      "last_name": ""
+      "first_name": "Chritine",
+      "last_name": "Duam"
     },
     "publish_date": "2023-08-17",
     "cover_state": "Asdfasd",
@@ -49,7 +49,7 @@
     },
     "label": {
       "id": 459,
-      "title": "The kids playing",
+      "title": "kids play",
       "color": "Violet"
     },
     "author": {
@@ -59,6 +59,48 @@
     },
     "publish_date": "2001-01-20",
     "cover_state": "Great",
+    "publisher": "New Publisher",
+    "archived": false
+  },
+  {
+    "id": 233,
+    "genre": {
+      "id": 106,
+      "name": "Fiction"
+    },
+    "label": {
+      "id": 28,
+      "title": "Space travel",
+      "color": "Black"
+    },
+    "author": {
+      "id": 834,
+      "first_name": "Pipe",
+      "last_name": "Bueno"
+    },
+    "publish_date": "2023-08-18",
+    "cover_state": "Bad",
+    "publisher": "",
+    "archived": false
+  },
+  {
+    "id": 205,
+    "genre": {
+      "id": 949,
+      "name": "Fiction"
+    },
+    "label": {
+      "id": 508,
+      "title": "The simplest",
+      "color": "Green"
+    },
+    "author": {
+      "id": 23,
+      "first_name": "Peter",
+      "last_name": "Markation"
+    },
+    "publish_date": "2023-08-18",
+    "cover_state": "",
     "publisher": "",
     "archived": false
   }

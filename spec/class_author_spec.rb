@@ -31,7 +31,7 @@ RSpec.describe AuthorHandler do
       saved_data = JSON.parse(File.read(tmp_filename), symbolize_names: true)
       expect(saved_data[0][:first_name]).to eq('John')
       expect(saved_data[0][:last_name]).to eq('Doe')
-      expect(saved_data[0][:id]).to match(/\h{8}-\h{4}-\h{4}-\h{4}-\h{12}/)
+      expect(saved_data[0][:id]).to be_an(Integer)
 
       # Clean up the temporary file
       File.delete(tmp_filename)

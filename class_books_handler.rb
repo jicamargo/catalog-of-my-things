@@ -18,9 +18,8 @@ class BookHandler
 
   def load_books()
     data = read_json_file(@filename)
-    
-    books = data.map do |book_data|
 
+    data.map do |book_data|
       genre = Genre.new(book_data[:genre][:name])
       genre.id = book_data[:genre][:id]
       label = Label.new(book_data[:label][:title], book_data[:label][:color])
@@ -29,11 +28,11 @@ class BookHandler
       author.id = book_data[:author][:id]
 
       book = Book.new(
-                book_data[:genre],
-                book_data[:author],
-                book_data[:label],
-                Date.parse(book_data[:publish_date])
-            )
+        book_data[:genre],
+        book_data[:author],
+        book_data[:label],
+        Date.parse(book_data[:publish_date])
+      )
 
       book.id = book_data[:id]
       book.genre = genre
@@ -45,8 +44,6 @@ class BookHandler
 
       book
     end
-
-    books
   end
 
   def save_books(books)
@@ -163,16 +160,16 @@ class BookHandler
   end
 
   def list_books()
-  books = load_books
-  puts '------------------------------- LIST OF BOOKS -------------------------------'
-  puts 'ID  |        TITLE        |      AUTHOR     |    PUBLISHER    | PUBLISH DATE '
-  books.each do |book|
-    label_title = "#{book.label.title} - #{book.label.color}"
-    author_name = "#{book.author.first_name} #{book.author.last_name}"
-    publish_date = "#{book.publish_date}"
-    publisher = "#{book.publisher}"
-    puts "#{book.id.to_s.ljust(4)}|#{label_title.ljust(20)} | #{author_name.ljust(15)} | #{publisher.ljust(15)} | #{publish_date} "
+    books = load_books
+    puts '------------------------------- LIST OF BOOKS -------------------------------'
+    puts 'ID  |        TITLE        |      AUTHOR     |    PUBLISHER    | PUBLISH DATE '
+    books.each do |book|
+      label_title = "#{book.label.title} - #{book.label.color}"
+      author_name = "#{book.author.first_name} #{book.author.last_name}"
+      publish_date = book.publish_date.to_s
+      publisher = book.publisher.to_s
+      puts "#{book.id.to_s.ljust(4)}|#{label_title.ljust(20)} | #{author_name.ljust(15)} | #{publisher.ljust(15)} | #{publish_date} "
+    end
+    puts '-----------------------------------------------------------------------------'
   end
-  puts '-----------------------------------------------------------------------------'
-end
 end

@@ -1,1 +1,40 @@
-[]
+[
+  {
+    "id": 605,
+    "genre": {
+      "id": 726,
+      "name": "Clasic"
+    },
+    "label": {
+      "id": 364,
+      "title": "Pipe bueno",
+      "color": "Album"
+    },
+    "author": {
+      "id": 34,
+      "first_name": "Pipename",
+      "last_name": "Pipe"
+    },
+    "publish_date": "2023-08-18",
+    "on_spotify": true
+  },
+  {
+    "id": 420,
+    "genre": {
+      "id": 949,
+      "name": "Dance"
+    },
+    "label": {
+      "id": 404,
+      "title": "Party for all",
+      "color": "Album"
+    },
+    "author": {
+      "id": 519,
+      "first_name": "Orchestra",
+      "last_name": "Party"
+    },
+    "publish_date": "2023-08-18",
+    "on_spotify": true
+  }
+]

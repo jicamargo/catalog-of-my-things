@@ -5,6 +5,7 @@ require_relative 'file_validator'
 
 class GenreHandler
   attr_reader :genres
+
   include FileValidator
 
   def initialize
@@ -28,7 +29,7 @@ class GenreHandler
 
   def load_genres()
     data = read_json_file(@filename)
-    data.map do |genre_data| 
+    data.map do |genre_data|
       genre = Genre.new(genre_data[:name])
       genre.id = genre_data[:id]
       genre
@@ -41,7 +42,7 @@ class GenreHandler
     genre_data = genres.map do |genre|
       {
         id: genre.id,
-        name: genre.name.strip.capitalize,
+        name: genre.name.strip.capitalize
       }
     end
 
@@ -67,7 +68,7 @@ class GenreHandler
 
     existing_genre = genres.find do |genre|
       existing_genre_name = genre.name.strip.capitalize
-      existing_genre_name == trimmed_genre_name 
+      existing_genre_name == trimmed_genre_name
     end
 
     if existing_genre.nil?
@@ -76,10 +77,7 @@ class GenreHandler
       save_genres(genres)
       genre
     else
-      puts 'Genre already exists'
-      puts(existing_genre.name)
-      puts(existing_genre.id)
-      genre = existing_genre
+      existing_genre
     end
   end
 end

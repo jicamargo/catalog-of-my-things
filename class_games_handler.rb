@@ -18,8 +18,7 @@ class GameHandler
   def load_games()
     data = read_json_file(@filename)
 
-    games = data.map do |game_data|
-
+    data.map do |game_data|
       genre = Genre.new(game_data[:genre][:name])
       genre.id = game_data[:genre][:id]
       label = Label.new(game_data[:label][:title], game_data[:label][:color])
@@ -42,8 +41,6 @@ class GameHandler
       game.archived = game_data[:archived]
       game
     end
-
-    games
   end
 
   def save_games(games)
@@ -157,12 +154,11 @@ class GameHandler
     puts '------------------------------- LIST OF GAMES -------------------------------'
     puts 'ID  |        TITLE        |      GENRE      |  MULTIPLAYER  | PUBLISH DATE '
     games.each do |game|
+      label_title = game.label.title.to_s
+      genre = game.genre.name.to_s
+      publish_date = game.publish_date.to_s
+      multiplayer = game.multiplayer.to_s
 
-      label_title = "#{game.label.title}"
-      genre = "#{game.genre.name}"
-      publish_date = "#{game.publish_date}"
-      multiplayer = "#{game.multiplayer}"
-      
       puts "#{game.id.to_s.ljust(4)}|#{label_title.ljust(20)} | #{genre.ljust(15)} |     #{multiplayer.ljust(5)}     | #{publish_date} "
     end
     puts '-----------------------------------------------------------------------------'

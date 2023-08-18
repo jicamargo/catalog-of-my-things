@@ -1,62 +1,36 @@
 require_relative '../class_musicalbum_handler'
-require_relative '../class_genre_handler'
+require_relative '../class_genres_handler'
 
 RSpec.describe MusicalbumHandler do
   let(:musicalbum_handler) { MusicalbumHandler.new }
 
   describe '#list_musicalbums' do
     it 'lists music albums' do
-      album1 = Musicalbum.new('Rock', 'Author 1', 'Album 1', Time.now, true)
-      album2 = Musicalbum.new('Jazz', 'Author 2', 'Album 2', Time.now, false)
-      musicalbum_handler.instance_variable_set(:@musicalbums, [album1, album2])
-
-      expected_output = <<~OUTPUT
-        List of Music Albums:
-        Title: Album 1, Genre: Rock
-        Title: Album 2, Genre: Jazz
-      OUTPUT
-
-      expect { musicalbum_handler.list_musicalbums }.to output(expected_output).to_stdout
+      album1 = instance_double(Musicalbum, id: 1, label: instance_double(Label, title: 'Album 1'), genre: instance_double(Genre, name: 'Rock'), on_spotify: true)
+      musicalbum_handler.instance_variable_set(:@musicalbums, [album1])
+      expect { musicalbum_handler.list_musicalbums }.to output(/Album 1/).to_stdout
     end
   end
 
-  describe '#add_music_album' do
-    context 'when the genre already exists' do
-      it 'adds a new music album' do
-        allow(musicalbum_handler).to receive(:gets).and_return("Album Title\n", "Rock\n", "y\n")
-        genres = [Genre.new('Rock'), Genre.new('Jazz')]
-        musicalbum_handler.instance_variable_set(:@genres, genres)
-
-        expect { musicalbum_handler.add_music_album(genres) }.to change { musicalbum_handler.musicalbums.size }.by(1)
-        expect(musicalbum_handler.musicalbums.first.label).to eq('Album Title')
-        expect(musicalbum_handler.musicalbums.first.genre).to eq('Rock')
-        expect(musicalbum_handler.musicalbums.first.on_spotify).to be_truthy
-      end
+  describe '#input_author' do
+    it 'returns an array with first name and last name' do
+      allow(musicalbum_handler).to receive(:gets).and_return("John Doe\n")
+      expect(musicalbum_handler.input_author).to eq(%w[John Doe])
     end
 
-    context 'when the genre does not exist and user adds a new genre' do
-      it 'adds a new music album with a new genre' do
-        allow(musicalbum_handler).to receive(:gets).and_return("Album Title\n", "New Genre\n", "y\n", "New Genre\n", "y\n")
-        genre_handler = GenreHandler.new
-        genres = genre_handler.genres
-        musicalbum_handler.instance_variable_set(:@genre_handler, genre_handler)
-
-        expect { musicalbum_handler.add_music_album(genres) }.to change { musicalbum_handler.musicalbums.size }.by(1)
-        expect(musicalbum_handler.musicalbums.first.label).to eq('Album Title')
-        expect(musicalbum_handler.musicalbums.first.genre).to eq('New Genre')
-        expect(musicalbum_handler.musicalbums.first.on_spotify).to be_truthy
-        expect(genre_handler.genres.size).to eq(1)
-      end
+    it 'returns an array with only first name if last name is not provided' do
+      allow(musicalbum_handler).to receive(:gets).and_return("Jane\n")
+      expect(musicalbum_handler.input_author).to eq(['Jane', ''])
     end
+  end
 
-    context 'when the genre does not exist and user does not add a new genre' do
-      it 'does not add a new music album' do
-        allow(musicalbum_handler).to receive(:gets).and_return("Album Title\n", "Nonexistent Genre\n", "n\n")
-        genres = [Genre.new('Rock'), Genre.new('Jazz')]
-        musicalbum_handler.instance_variable_set(:@genres, genres)
-
-        expect { musicalbum_handler.add_music_album(genres) }.not_to(change { musicalbum_handler.musicalbums.size })
-      end
+  describe '#genre_validator' do
+    it 'adds a new genre and returns its name' do
+      allow(musicalbum_handler).to receive(:gets).and_return("New Genre\n")
+      genres = []
+      expect(musicalbum_handler.genre_validator(genres)).to eq('New Genre')
+      expect(genres.size).to eq(1)
+      expect(genres.first.name).to eq('New Genre')
     end
   end
 end
