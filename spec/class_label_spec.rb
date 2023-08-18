@@ -1,4 +1,4 @@
-require './label'
+require './class_label'
 
 describe Label do
   context 'when using the add_item method' do

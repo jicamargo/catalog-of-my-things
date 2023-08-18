@@ -18,7 +18,6 @@ class BookHandler
 
   def load_books()
     data = read_json_file(@filename)
-    
     books = data.map do |book_data|
 
       genre = Genre.new(book_data[:genre][:name])
@@ -54,7 +53,6 @@ class BookHandler
 
     book_data = books.map do |book|
       {
-
         id: book.id,
         genre: { id: book.genre.id, name: book.genre.name },
         label: { id: book.label.id, title: book.label.title, color: book.label.color },
