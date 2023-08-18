@@ -1,15 +1,65 @@
 [
   {
-    "id": "1a13654f-fa00-4dbb-b7c8-ae76339c264a",
-    "genre": "Love",
+    "id": 123,
+    "genre": {
+      "id": 190,
+      "name": "Terrorr"
+    },
     "label": {
-      "title": "Touch of hint",
+      "id": 728,
+      "title": "Dasfadsf",
+      "color": "Asdfadsf"
+    },
+    "author": {
+      "id": 498,
+      "first_name": "Fdsfsdafsdf",
+      "last_name": ""
+    },
+    "publish_date": "2023-08-17",
+    "cover_state": "Asdfasd",
+    "publisher": "Fas",
+    "archived": false
+  },
+  {
+    "id": 759,
+    "genre": {
+      "id": 395,
+      "name": "Dramma"
+    },
+    "label": {
+      "id": 109,
+      "title": "The dramma",
       "color": "Green"
     },
-    "author": "Make Bary",
-    "publish_date": "2020-02-02",
-    "cover_state": "Pure",
-    "publisher": "Yanks Gary",
+    "author": {
+      "id": 131,
+      "first_name": "Maria",
+      "last_name": "Carey"
+    },
+    "publish_date": "2019-10-10",
+    "cover_state": "Good",
+    "publisher": "Amaira publish",
+    "archived": false
+  },
+  {
+    "id": 423,
+    "genre": {
+      "id": 683,
+      "name": "Kids"
+    },
+    "label": {
+      "id": 459,
+      "title": "The kids playing",
+      "color": "Violet"
+    },
+    "author": {
+      "id": 793,
+      "first_name": "Juana",
+      "last_name": "Astrid"
+    },
+    "publish_date": "2001-01-20",
+    "cover_state": "Great",
+    "publisher": "",
     "archived": false
   }
 ]

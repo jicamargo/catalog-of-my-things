@@ -17,7 +17,7 @@ module MessageOutputs
                '     7) - Add a book',
                '     8) - Add a music album',
                '     9) - Add a game',
-               '    10) - Exit'.colorize(color: :red).bold,
+               '     0) - Exit'.colorize(color: :red).bold,
                '']
     puts '________________________________________________'
     puts "\nPlease choose an option by entering a number:".underline

@@ -2,9 +2,10 @@
 require_relative 'class_item'
 class Genre < Item
   attr_reader :name, :items
+  attr_accessor :id
 
   def initialize(name)
-    super(nil, nil, nil, nil) # Call superclass constructor with nil values
+    @id = generate_id
     @name = name
     @items = []
   end
@@ -13,5 +14,9 @@ class Genre < Item
   def add_item(item)
     @items << item
     item.genre = self # associate the item with the genre
+  end
+
+  def generate_id
+    SecureRandom.random_number(1000)
   end
 end
