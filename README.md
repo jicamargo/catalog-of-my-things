@@ -9,7 +9,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+  - [🚀 Demo Video](#live-demo)
 - [💻 Getting Started](#getting-started)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
@@ -39,6 +39,9 @@
 - **User-Friendly Interface**: Interact with your catalog through a user-friendly console interface, making data management intuitive and efficient.
 - **Flexible and Expandable**: The modular design allows easy addition of new item types or enhancements to suit your needs.
 - **Efficient Search**: Search and retrieve items based on various criteria, enhancing the usability of your catalog.
+
+#### Demostration video <a name="live-demo"></a>
+  - [🚀 Watch the team talking about this project](https://drive.google.com/file/d/1toFii-z68Ov5vxcheXIpckndLZ1bIaDO/view?usp=sharing)
 
 <!-- GETTING STARTED -->
 
