@@ -1,0 +1,128 @@
+[
+  {
+    "id": 123,
+    "genre": {
+      "id": 190,
+      "name": "Terrorr"
+    },
+    "label": {
+      "id": 728,
+      "title": "Liive good",
+      "color": "blue"
+    },
+    "author": {
+      "id": 498,
+      "first_name": "Chritine",
+      "last_name": "Duam"
+    },
+    "publish_date": "2023-08-17",
+    "cover_state": "Asdfasd",
+    "publisher": "Fas",
+    "archived": false
+  },
+  {
+    "id": 759,
+    "genre": {
+      "id": 395,
+      "name": "Dramma"
+    },
+    "label": {
+      "id": 109,
+      "title": "The dramma",
+      "color": "Green"
+    },
+    "author": {
+      "id": 131,
+      "first_name": "Maria",
+      "last_name": "Carey"
+    },
+    "publish_date": "2019-10-10",
+    "cover_state": "Good",
+    "publisher": "Amaira publish",
+    "archived": false
+  },
+  {
+    "id": 423,
+    "genre": {
+      "id": 683,
+      "name": "Kids"
+    },
+    "label": {
+      "id": 459,
+      "title": "kids play",
+      "color": "Violet"
+    },
+    "author": {
+      "id": 793,
+      "first_name": "Juana",
+      "last_name": "Astrid"
+    },
+    "publish_date": "2001-01-20",
+    "cover_state": "Great",
+    "publisher": "New Publisher",
+    "archived": false
+  },
+  {
+    "id": 233,
+    "genre": {
+      "id": 106,
+      "name": "Fiction"
+    },
+    "label": {
+      "id": 28,
+      "title": "Space travel",
+      "color": "Black"
+    },
+    "author": {
+      "id": 834,
+      "first_name": "Pipe",
+      "last_name": "Bueno"
+    },
+    "publish_date": "2023-08-18",
+    "cover_state": "Bad",
+    "publisher": "",
+    "archived": false
+  },
+  {
+    "id": 205,
+    "genre": {
+      "id": 949,
+      "name": "Fiction"
+    },
+    "label": {
+      "id": 508,
+      "title": "The simplest",
+      "color": "Green"
+    },
+    "author": {
+      "id": 23,
+      "first_name": "Peter",
+      "last_name": "Markation"
+    },
+    "publish_date": "2023-08-18",
+    "cover_state": "",
+    "publisher": "",
+    "archived": false
+  },
+  {
+    "id": 752,
+    "genre": {
+      "id": 620,
+      "name": "Action"
+    },
+    "label": {
+      "id": 387,
+      "title": "New book",
+      "color": "Green"
+    },
+    "author": {
+      "id": 261,
+      "first_name": "Jhon",
+      "last_name": "Perterson"
+    },
+    "publish_date": "2023-08-18",
+    "cover_state": "Bad",
+    "publisher": "",
+    "archived": false
+  }
+]
